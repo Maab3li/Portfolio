@@ -7,11 +7,11 @@ import ContactMeSection from "./components/ContactMeSection";
 import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
     <ChakraProvider>
       <AlertProvider>
         <main>
@@ -24,7 +24,7 @@ function App() {
         </main>
       </AlertProvider>
     </ChakraProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
