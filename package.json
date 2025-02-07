@@ -1,8 +1,8 @@
 {
-  "name": "graded-assessment",
-  "homepage": "https://Maab3li.github.io/Portfolio/",
+  "name": "portfolio",
+  "homepage": "https://maab3li-portfolio.vercel.app/",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.10.5",
