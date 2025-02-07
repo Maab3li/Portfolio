@@ -18,10 +18,7 @@ const Card = ({ title, description, imageSrc }) => {
       <Image src={imageSrc} borderBottomRadius={10} borderTopRadius={10} alt="project image" />
       <Text textAlign='center' fontSize='xl' pt={2}>{title}</Text>
       <Text px={2} py={4}>{description}</Text>
-      <Button bgColor='pink.200' _dark={{bgColor:'gray'}}>
-      <Text px={2} pb={2}>Implementation Video <FontAwesomeIcon icon={faArrowRight} /></Text>
-      </Button>
-      
+      <Text px={2} pb={2}>View more details <FontAwesomeIcon icon={faArrowRight} style={{paddingLeft:4}} /></Text>
       </Box>
     </HStack>
   )
