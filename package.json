@@ -1,6 +1,6 @@
 {
   "name": "Portfolio",
-  "homepage": "https://maab3li.github.io/Portfolio/",
+  "homepage": "https://maab3li-portfolio.vercel.app/",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
