@@ -28,10 +28,10 @@ const LandingSection = () => (
     <Box fontSize='xl' color='#28282B' _dark={{color:'white'}}>
       {greeting}
     </Box>
-    <Box fontSize='2xl' color='#28282B' _dark={{color:'white'}}>
+    <Box fontSize='2xl' color='#28282B' fontWeight={600} _dark={{color:'white'}}>
       {bio1}
     </Box>
-    <Box fontSize='2xl' color='#28282B' _dark={{color:'white'}}>
+    <Box fontSize='2xl' color='#28282B' fontWeight={600} _dark={{color:'white'}}>
       {bio2}<FontAwesomeIcon icon={icon} color="cyan" className="loader"/>
     </Box>
     </VStack>
