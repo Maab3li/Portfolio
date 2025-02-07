@@ -25,7 +25,7 @@ const LandingSection = () => (
     <Avatar size='xl'>
       <img src={avatar} alt="avatar" style={{borderRadius:'50%'}}/>
     </Avatar>
-    <Box fontSize='xl' color='#28282B' _dark={{color:'white'}}>
+    <Box fontSize='xl' color='#28282B' _dark={{color:'white'}} fontWeight={600}>
       {greeting}
     </Box>
     <Box fontSize='2xl' color='#28282B' _dark={{color:'white'}} fontWeight={600}>
