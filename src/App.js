@@ -8,10 +8,11 @@ import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter basename="/Portfolio">
+    <BrowserRouter>
     <ChakraProvider>
       <AlertProvider>
         <main>
@@ -24,7 +25,7 @@ function App() {
         </main>
       </AlertProvider>
     </ChakraProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
