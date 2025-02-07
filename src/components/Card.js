@@ -8,7 +8,6 @@ const Card = ({ title, description, imageSrc }) => {
     <HStack
     width='full'
     direction='row'
-    
     >
       <Box
       color='black'
@@ -16,12 +15,9 @@ const Card = ({ title, description, imageSrc }) => {
       _dark={{color:'white',bgColor:'#28282B'}}
       borderRadius={10}>
       <Image src={imageSrc} borderBottomRadius={10} borderTopRadius={10} alt="project image" />
-      <Text textAlign='center' fontSize='xl' pt={2}>{title}</Text>
-      <Text px={2} py={4}>{description}</Text>
-      <Button bgColor='pink.200' _dark={{bgColor:'gray'}}>
-      <Text px={2} pb={2}>Implementation Video <FontAwesomeIcon icon={faArrowRight} /></Text>
-      </Button>
-      
+      <Text textAlign='center' fontSize='2xl' fontWeight='600' color='gray.800' _dark={{color:'#FFF'}} pt={2}>{title}</Text>
+      <Text px={2} py={4} color='gray.600' _dark={{color:'#FFF'}}>{description}</Text>
+      <Text px={2} pb={2} color='gray.600' _dark={{color:'#FFF'}}>View more details<FontAwesomeIcon icon={faArrowRight} style={{paddingLeft:4}} /></Text>
       </Box>
     </HStack>
   )

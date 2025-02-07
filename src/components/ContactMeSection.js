@@ -19,7 +19,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const LandingSection = () => {
-  const {register,reset, handleSubmit, formState:{errors,isSubmitSuccessful,isSubmitting}} = useForm({
+  const {register,reset, handleSubmit, formState:{errors,isSubmitSuccessful,isSubmitting, isValid}} = useForm({
     mode: 'onChange', reValidateMode: 'onChange' ,
     defaultValues: {
       firstName:'',
@@ -44,11 +44,17 @@ const LandingSection = () => {
     setIsSubmitted(false)
     console.log('data',data)
     onOpen('success','Your info was sent, thanks for your contact.')
+    reset()
   }
 
   const onerror = (error) => {
     console.log('error',error)
-    onOpen('error','The form is not valid, please review it and try again.')
+    if(isValid) {
+      onOpen('error','please try again later.')
+    }
+    else{
+      return
+    }
 
   }
 
@@ -106,7 +112,7 @@ const LandingSection = () => {
                 {errors.comment ? <div style={{color:'rgb(250, 41, 41)'}}>{errors.comment?.message}</div> :null}
               </FormControl>
               <Button type="submit" colorScheme="pink" width="full">
-                {isSubmitted? <FontAwesomeIcon icon={faSpinner} /> :'Submit'}
+                {isSubmitted? <FontAwesomeIcon icon={faSpinner} className="loader2" /> :'Submit'}
               </Button>
             </VStack>
           </form>

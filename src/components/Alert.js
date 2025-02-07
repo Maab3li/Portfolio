@@ -25,7 +25,7 @@ function Alert() {
       <AlertDialogOverlay>
         <AlertDialogContent py={4} backgroundColor={isSuccess ? '#81C784' : '#FF8A65'}>
           <AlertDialogHeader fontSize="lg" fontWeight="bold">
-            {isSuccess ? 'All good!' : 'Oops!'}
+            {isSuccess ? 'All good!' : 'Something went wrong'}
           </AlertDialogHeader>
           <AlertDialogBody>{message}</AlertDialogBody>
         </AlertDialogContent>
