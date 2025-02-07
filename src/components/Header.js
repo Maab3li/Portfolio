@@ -36,7 +36,6 @@ const socials = [
 const Header = () => {
 
   const [y, setY] = useState(0)
-  console.log('y',y)
 
 
   const [calculatedY, setCalculatedY] = useState(0)
