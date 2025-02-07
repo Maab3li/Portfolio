@@ -19,7 +19,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const LandingSection = () => {
-  const {register,reset, handleSubmit, formState:{errors,isSubmitSuccessful,isSubmitting}} = useForm({
+  const {register,reset, handleSubmit, formState:{errors,isSubmitSuccessful,isSubmitting, isValid}} = useForm({
     mode: 'onChange', reValidateMode: 'onChange' ,
     defaultValues: {
       firstName:'',
@@ -48,8 +48,13 @@ const LandingSection = () => {
 
   const onerror = (error) => {
     console.log('error',error)
-    onOpen('error','The form is not valid, please review it and try again.')
-
+    if(isValid) {
+      onOpen('error','The form is not valid, please review it and try again.')
+      reset()
+    }
+    else {
+      return
+    }
   }
 
   return (
