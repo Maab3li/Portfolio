@@ -122,7 +122,7 @@ const Header = () => {
             </Box>
           </HStack>
             <HStack spacing={8} px={4} display={{base:"none",md:'flex'}}>
-              <HashRouter exact path={`/`}>
+              <HashRouter>
               <Box>
                 <NavLink smooth className="sections" onClick={handleClick('projects')} backgroundColorcolor="gray">Projects</NavLink>
               </Box>
