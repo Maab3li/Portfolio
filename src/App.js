@@ -12,7 +12,7 @@ import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter basename="/">
+    <HashRouter>
     <ChakraProvider>
       <AlertProvider>
         <main>
