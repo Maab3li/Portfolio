@@ -14,6 +14,7 @@ import { Box, HStack, VStack,
   IconButton,
   CloseButton} from "@chakra-ui/react";
 import { icon } from "@fortawesome/fontawesome-svg-core";
+import { HashRouter } from "react-router-dom";
 
 const socials = [
   {
@@ -121,12 +122,14 @@ const Header = () => {
             </Box>
           </HStack>
             <HStack spacing={8} px={4} display={{base:"none",md:'flex'}}>
+              <HashRouter exact path={`/`}>
               <Box>
                 <NavLink smooth className="sections" onClick={handleClick('projects')} backgroundColorcolor="gray">Projects</NavLink>
               </Box>
               <Box>
                 <NavLink className ="sections" onClick={handleClick('contactme')}>Contact Me</NavLink>
               </Box>
+              </HashRouter>
             </HStack>
             </HStack>
             
@@ -146,12 +149,14 @@ const Header = () => {
                 ml='auto'
                 >
                 </CloseButton>
-              <Box py={2}>
-                <NavLink className="sections" onClick={handleClick('projects')} backgroundColorcolor="gray">Projects</NavLink>
-              </Box>
-              <Box py={2}>
-                <NavLink className ="sections" onClick={handleClick('contactme')}>Contact Me</NavLink>
-              </Box>
+                <HashRouter>
+                  <Box py={2}>
+                    <NavLink className="sections" onClick={handleClick('projects')} backgroundColorcolor="gray">Projects</NavLink>
+                  </Box>
+                  <Box py={2}>
+                    <NavLink className ="sections" onClick={handleClick('contactme')}>Contact Me</NavLink>
+                  </Box>
+              </HashRouter>
 
             <Box py={2} px={4}>
               <Box>
