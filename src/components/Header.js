@@ -97,31 +97,31 @@ const Header = () => {
       _dark={{bg:'#28282B'}}
       zIndex='9999'
     >
-      <Box color="blackAlpha.600" _dark={{color:'white'}} fontWeight='bold' w="100%" margin="0 auto">
+      <Box color="blackAlpha.600" _dark={{color:'gray.300'}} fontWeight='bold' w="100%" margin="0 auto">
         <HStack
           px={16}
           spacing='20px'
           py={4}
           justifyContent="space-between"
           alignItems="center"
-          display="flex" spaceX="8"
+          display="flex" 
         >
           <HStack id="menu" direction='row' spacing={12}>
             <Box display={{base:"none",md:'flex'}}>
-            <Box color='blackAlpha.600' _dark={{color:'white'}} px={4}>
+            <Box color='blackAlpha.600' _dark={{color:'gray.300'}} px={4}>
               <a href={socials[0]['url']} ><FontAwesomeIcon icon= {socials[0]['icon']}/></a>
             </Box>
-            <Box color='blackAlpha.600' _dark={{color:'white'}} px={4}>
+            <Box color='blackAlpha.600' _dark={{color:'gray.300'}} px={4}>
               <a href={socials[1]['url']} ><FontAwesomeIcon icon= {socials[1]['icon']} /></a>
             </Box>
-            <Box color='blackAlpha.600' _dark={{color:'white'}} px={4}>
+            <Box color='blackAlpha.600' _dark={{color:'gray.300'}} px={4}>
               <a href={socials[2]['url']} ><FontAwesomeIcon icon= {socials[2]['icon']}/></a>
             </Box>
             </Box>
           </HStack>
             <HStack spacing={8} px={4} display={{base:"none",md:'flex'}}>
               <Box>
-                <NavLink smooth className="sections" onClick={handleClick('projects')} backgroundColorcolor="gray">Projects</NavLink>
+                <NavLink className="sections" onClick={handleClick('projects')}>Projects</NavLink>
               </Box>
               <Box>
                 <NavLink className ="sections" onClick={handleClick('contactme')}>Contact Me</NavLink>
@@ -146,7 +146,7 @@ const Header = () => {
                 >
                 </CloseButton>
               <Box py={2}>
-                <NavLink className="sections" onClick={handleClick('projects')} backgroundColorcolor="gray">Projects</NavLink>
+                <NavLink className="sections" onClick={handleClick('projects')}>Projects</NavLink>
               </Box>
               <Box py={2}>
                 <NavLink className ="sections" onClick={handleClick('contactme')}>Contact Me</NavLink>
