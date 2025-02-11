@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Mina Clinic",
     description:
-      "A website design for a modern dental clinic",
+      "A modern website design for a dental clinic",
     getImageSrc: () => require("../images/pc-home.png"),
   }
 ];

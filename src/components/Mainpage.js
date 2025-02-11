@@ -8,7 +8,6 @@ import Footer from "./Footer";
 import { AlertProvider } from "../context/alertContext";
 import Alert from "./Alert";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import Details from "./Details";
 
 function Mainpage() {
 

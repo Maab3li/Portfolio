@@ -38,8 +38,7 @@ const Header = () => {
   const [y, setY] = useState(0)
 
 
-  const [calculatedY, setCalculatedY] = useState(0)
-  const [appearance, setAppearance] = useState(0)
+  const [calculatedY, setCalculatedY] = useState('-200px')
 
 
   const handleClick = (anchor) => () => {
@@ -57,22 +56,21 @@ const Header = () => {
     }
   };
 
-  function handleScroll() {
-    setY(window.scrollY)
-    if(window.scrollY > y) {
-      setCalculatedY(0)
-      setAppearance('none')
-    }
-    else if(window.scrollY <= y){
-      setCalculatedY('-200px')
-      setAppearance('block')
-    }
-  }
   useEffect(() => {
     window.addEventListener('scroll',handleScroll);
     return () => window.removeEventListener('scroll',handleScroll)
   },[window.scrollY])
-  
+
+  function handleScroll() {
+    setY(window.scrollY)
+    if(window.scrollY >= y) {
+      setCalculatedY(0)
+    }
+    else if(window.scrollY < y){
+      setCalculatedY('-200px')
+    }
+  }
+ 
   function openMenu() {
     document.getElementById('mobile-menu').style.display ='block'
   }

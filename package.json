@@ -6,6 +6,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.10.5",
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.10.4",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -17,6 +18,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "caniuse-lite": "^1.0.30001697",
+    "emailjs": "^4.0.3",
     "formik": "^2.4.6",
     "framer-motion": "^7.3.5",
     "react": "^18.2.0",

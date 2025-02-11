@@ -49,7 +49,7 @@ const LandingSection = () => {
   const onerror = (error) => {
     console.log('error',error)
     if(isValid) {
-      onOpen('error','The form is not valid, please review it and try again.')
+      onOpen('error','Something went wrong , please try again later.')
       reset()
     }
     else {
