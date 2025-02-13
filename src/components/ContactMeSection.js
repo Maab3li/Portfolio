@@ -34,9 +34,20 @@ const LandingSection = () => {
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [Message, setMessage] = React.useState("");
 
+  const [isConnected, setIsConnected] = useState(navigator.onLine)
+
   const [isSubmitted,setIsSubmitted] = useState(false)
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
+
+  function handleCheckConnect() {
+    setIsConnected(navigator.onLine)
+  }
+
+  useEffect(() => {
+    window.addEventListener('online',handleCheckConnect)
+    window.addEventListener('offline',handleCheckConnect)
+  },[])
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
@@ -53,6 +64,7 @@ const LandingSection = () => {
     e.preventDefault()
     setIsSubmitted(false)
     console.log('data',data)
+    if(isConnected) {
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -67,18 +79,25 @@ const LandingSection = () => {
           setIsSuccess(true);
           setMessage(json.message);
           e.target.reset();
+          onOpen('success','Your info was sent, thanks for your contact.')
           reset();
         } else {
           setIsSuccess(false);
           setMessage(json.message);
+          onOpen('error','Something went wrong , please try again later.')
+          reset()
         }
       })
-    onOpen('success','Your info was sent, thanks for your contact.')
+    }
+    else {
+      onOpen('error','Something went wrong , please try again later.')
+          reset()
+    }
   }
 
   const onerror = (error) => {
     console.log('error',error)
-    if(isValid) {
+    if(isValid && !isSuccess) {
       onOpen('error','Something went wrong , please try again later.')
       reset()
     }
@@ -116,7 +135,7 @@ const LandingSection = () => {
             />
             <input
               type="hidden"
-              value="Mission Control"
+              value="Contact form"
               {...register("from_name")}
             />
             <input
@@ -143,11 +162,11 @@ const LandingSection = () => {
                 />
                 {errors.email ? <div style={{color:'rgb(250, 41, 41)'}}>{errors.email?.message}</div> :null}
               </FormControl>
-              <FormControl>
+              <FormControl color='black' _dark={{color:'#FFF'}}>
                 <FormLabel htmlFor="type" color='#28282B' _dark={{color:'#FFF'}}>Type of enquiry</FormLabel>
-                <Select {...register('type', {required: 'Required'})} id="type" name="type" >
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
+                <Select  {...register('type', {required: 'Required'})} id="type" name="type" >
+                  <option value="hire Me">Freelance project proposal</option>
+                  <option value="collaboration invitation">
                     Invite for collaboration
                   </option>
                   <option value="other">Other</option>
@@ -164,7 +183,7 @@ const LandingSection = () => {
                 <input type="hidden" name="redirect" value="https://web3forms.com/success" />
               </FormControl>
               <Button type="submit" colorScheme="pink" width="full">
-                {isSubmitted? <FontAwesomeIcon icon={faSpinner} /> :'Submit'}
+                {isSubmitted? <FontAwesomeIcon icon={faSpinner} className="loader2"/> :'Submit'}
               </Button>
               <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE"></input>
             </VStack>
