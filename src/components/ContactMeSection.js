@@ -146,11 +146,11 @@ const LandingSection = () => {
               <FormControl>
                 <FormLabel htmlFor="type" color='#28282B' _dark={{color:'#FFF'}}>Type of enquiry</FormLabel>
                 <Select {...register('type', {required: 'Required'})} id="type" name="type" >
-                  <option style={{color:'black'}} value="hireMe">Freelance project proposal</option>
-                  <option style={{color:'black'}} value="openSource">
-                    Open source consultancy session
+                  <option value="hireMe">Freelance project proposal</option>
+                  <option value="openSource">
+                    Invite for collaboration
                   </option>
-                  <option style={{color:'black'}} value="other">Other</option>
+                  <option value="other">Other</option>
                 </Select>
               </FormControl>
               <FormControl>
