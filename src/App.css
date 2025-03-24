@@ -8,6 +8,7 @@ a:hover {
 
 a:active {
     color: #FFF;
+    background-color: palevioletred;
 }
 
 .loader {
