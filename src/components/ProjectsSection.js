@@ -7,29 +7,31 @@ const projects = [
   {
     title: "To-do App",
     description:
-      "A small app to set daily tasks and organize your work",
+      "A small app to organize work.",
     getImageSrc: () => require("../images/to-do list.png"),
+    url: "https://todo-list-app99.vercel.app"
   },
   {
     title: "Mina Clinic",
     description:
-      "A modern website design for a dental clinic",
+      "A modern website design for a dental clinic.",
     getImageSrc: () => require("../images/pc-home.png"),
+    url :"https://mina-clinic.vercel.app"
   }
 ];
 
 const ProjectsSection = () => {
   return (
     <FullScreenSection
-      bgGradient="linear(cyan.100, cyan.100)"
-      _dark={{bgGradient:'linear(gray.400, gray.400)'}}
+      backgroundColor="white"
+      _dark={{backgroundColor:'black'}}
       isDarkBackground
       p={8}
       alignItems="flex-start"
       spacing={8}
     >
       <Heading as="h1" id="projects-section" color='#28282B' _dark={{color:'#FFF'}}>
-        Featured Projects
+       Projects
       </Heading>
       <SimpleGrid
         columns={{ base: 1, md: 2, lg:2}}
@@ -41,6 +43,7 @@ const ProjectsSection = () => {
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc()}
+            url = {project.url}
           />
         ))}
       </SimpleGrid>

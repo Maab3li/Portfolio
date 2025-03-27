@@ -144,10 +144,13 @@ const Header = () => {
           </HStack>
             <HStack spacing={8} px={4} display={{base:"none",md:'flex'}}>
               <Box>
+                <NavLink className ="sections" onClick={handleClick('about&skills')}>About&Skills</NavLink>
+              </Box>
+              <Box>
                 <NavLink className="sections" onClick={handleClick('projects')}>Projects</NavLink>
               </Box>
               <Box>
-                <NavLink className ="sections" onClick={handleClick('contactme')}>Contact Me</NavLink>
+                <NavLink className ="sections" onClick={handleClick('contactme')}>Contact</NavLink>
               </Box>
             </HStack>
             </HStack>
@@ -177,12 +180,16 @@ const Header = () => {
               className="absolute"
                 >
                 </CloseButton>
+                <Box py={6}>
+                <NavLink className ="sections" onClick={handleClick('about&skills')}>About&Skills</NavLink>
+              </Box>
               <Box py={6}>
                 <NavLink className="sections" onClick={handleClick('projects')}>Projects</NavLink>
               </Box>
               <Box py={6}>
-                <NavLink className ="sections" onClick={handleClick('contactme')}>Contact Me</NavLink>
+                <NavLink className ="sections" onClick={handleClick('contactme')}>Contact</NavLink>
               </Box>
+
 
             <Box py={6} px={4}>
               <Box>

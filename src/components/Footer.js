@@ -14,7 +14,7 @@ const Footer = () => {
           maxWidth="1024px"
           height={16}
         >
-          <p>Maab Ali • © 2025</p>
+          <p>© Maab Ali 2025</p>
         </Flex>
       </footer>
     </Box>

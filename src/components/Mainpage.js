@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { ColorModeProvider } from "@chakra-ui/react";
 import Header from "./Header";
 import LandingSection from "./LandingSection";
+import About from "./About";
 import ProjectsSection from "./ProjectsSection";
 import ContactMeSection from "./ContactMeSection";
 import Footer from "./Footer";
@@ -16,6 +17,7 @@ function Mainpage() {
       <AlertProvider>
           <Header />
           <LandingSection />
+          <About />
           <ProjectsSection />
           <ContactMeSection />
           <Footer />

@@ -8,11 +8,15 @@ a:hover {
 
 a:active {
     color: #FFF;
-    background-color: palevioletred;
+}
+
+.sp {
+  font-size: 30px;
+  color: black;
 }
 
 .loader {
-    animation: animate 7s infinite;
+    animation: animate 3s infinite;
 }
 
 @keyframes animate {

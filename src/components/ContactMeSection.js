@@ -85,13 +85,11 @@ const LandingSection = () => {
           setIsSuccess(false);
           setMessage(json.message);
           onOpen('error','Something went wrong , please try again later.')
-          reset()
         }
       })
     }
     else {
       onOpen('error','Something went wrong , please try again later.')
-          reset()
     }
   }
 
@@ -99,7 +97,6 @@ const LandingSection = () => {
     console.log('error',error)
     if(isValid && !isSuccess) {
       onOpen('error','Something went wrong , please try again later.')
-      reset()
     }
     else {
       return
@@ -109,14 +106,14 @@ const LandingSection = () => {
   return (
     <FullScreenSection
       isDarkBackground
-      bgGradient="linear(cyan.100, pink.500)"
-      _dark={{bgGradient:'linear(gray.400, black)'}}
+      backgroundColor="white"
+      _dark={{backgroundColor:'black'}}
       py={16}
       spacing={8}
     >
       <VStack w='100vw' px={{base:0,sm:8,base:10}} alignItems="flex-start">
         <Heading as="h1" id="contactme-section" color='#28282B' _dark={{color:'#FFF'}}>
-          Contact me
+          Contact
         </Heading>
         <Box p={6} rounded="md" w="100%" >
           <form 
@@ -173,16 +170,18 @@ const LandingSection = () => {
                 </Select>
               </FormControl>
               <FormControl>
-                <FormLabel htmlFor="comment" color='#28282B' _dark={{color:'#FFF'}}>Your message</FormLabel>
+                <FormLabel htmlFor="comment" color='#28282B' _dark={{color:'#FFF'}}>Message</FormLabel>
                 <Textarea {...register('comment', {required: 'Required'})}
                   id="comment"
                   name="comment"
                   height={250}
+                  color='#28282B'
+                  _dark={{color:'#FFF'}}
                 />
                 {errors.comment ? <div style={{color:'rgb(250, 41, 41)'}}>{errors.comment?.message}</div> :null}
                 <input type="hidden" name="redirect" value="https://web3forms.com/success" />
               </FormControl>
-              <Button type="submit" colorScheme="pink" width="full">
+              <Button type="submit" bgColor="cyan.200" width="full">
                 {isSubmitted? <FontAwesomeIcon icon={faSpinner} className="loader2"/> :'Submit'}
               </Button>
               <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE"></input>
