@@ -1,5 +1,7 @@
 import { Heading, List, ListIcon, ListItem,Text } from "@chakra-ui/react"
 import FullScreenSection from "./FullScreenSection"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowAltCircleRight, faCheckSquare, faCircle, faCircleArrowRight, faDotCircle, faListDots } from "@fortawesome/free-solid-svg-icons"
 
 
 function About () {
@@ -22,12 +24,12 @@ function About () {
             Skills
             </Heading>
             <List>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><ListIcon/>HTML</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><ListIcon/>CSS3</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><ListIcon/>Javasript</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><ListIcon/>React</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><ListIcon/>Tailwindcss</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><ListIcon/>Github</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>HTML</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>CSS3</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>Javasript</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>React</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>Tailwindcss</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>Github</ListItem>
 
             </List>
         </FullScreenSection>
