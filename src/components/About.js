@@ -24,12 +24,12 @@ function About () {
             Skills
             </Heading>
             <List>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>HTML</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>CSS3</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>Javasript</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>React</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>Tailwindcss</ListItem>
-            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}}/>Github</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}} width={10} height={10}/>HTML</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}} width={10} height={10}/>CSS3</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}} width={10} height={10}/>Javasript</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}} width={10} height={10}/>React</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}} width={10} height={10}/>Tailwindcss</ListItem>
+            <ListItem color='#28282B' _dark={{color:'#FFF'}}><FontAwesomeIcon icon={faCircle} style={{paddingRight:2}} width={10} height={10}/>Github</ListItem>
 
             </List>
         </FullScreenSection>
