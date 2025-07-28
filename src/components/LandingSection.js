@@ -1,6 +1,6 @@
 import React from "react";
 import '../App.css'
-import { Avatar, Heading, HStack, VStack, Wrap, WrapItem, Box, background } from "@chakra-ui/react";
+import { Avatar, HStack, VStack, Box } from "@chakra-ui/react";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 import avatar from '../images/Pi7_cropper (1).png'
 import FullScreenSection from "./FullScreenSection";

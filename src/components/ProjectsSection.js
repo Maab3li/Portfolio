@@ -17,6 +17,12 @@ const projects = [
       "A modern website design for a dental clinic.",
     getImageSrc: () => require("../images/pc-home.png"),
     url :"https://mina-clinic.vercel.app"
+  },
+  {
+  title: 'CRUDS Product Management System',
+  description: 'a create, read, update, delete and search system to help managers manage their stocks.',
+  getImageSrc: () => require("../images/cruds.png"),
+  url :'https://product-cruds.vercel.app/'
   }
 ];
 

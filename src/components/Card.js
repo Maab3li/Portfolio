@@ -24,7 +24,7 @@ const Card = ({ title, description, imageSrc, url }) => {
         <Box>
           
           <Button bgColor='cyan.200' _dark={{bgColor:'gray'}}>
-            <a href={url} target="_blank">View Demo</a>
+            <a href={url} target="_blank">Live Demo</a>
             <FontAwesomeIcon icon={faArrowRight} style={{marginLeft:4}}/>
           </Button>
         </Box>
