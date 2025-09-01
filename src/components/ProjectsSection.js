@@ -29,15 +29,15 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <FullScreenSection
-      backgroundColor="white"
-      _dark={{backgroundColor:'black'}}
+      bgGradient="linear(to-b, pink.400, pink.400)"
+      _dark={{bgGradient:'linear(to-b, black, black)'}}
       isDarkBackground
       p={8}
       alignItems="flex-start"
       spacing={8}
     >
       <Heading as="h1" id="projects-section" color='#28282B' _dark={{color:'#FFF'}}>
-       Projects
+       My projects
       </Heading>
       <SimpleGrid
         columns={{ base: 1, md: 2, lg:2}}

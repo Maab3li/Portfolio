@@ -106,14 +106,14 @@ const LandingSection = () => {
   return (
     <FullScreenSection
       isDarkBackground
-      backgroundColor="white"
-      _dark={{backgroundColor:'black'}}
+      bgGradient ="linear(to-b, pink.400, pink.800)"
+      _dark={{bgGradient:'linear(to-b, black, black)'}}
       py={16}
       spacing={8}
     >
       <VStack w='100vw' px={{base:0,sm:8,base:10}} alignItems="flex-start">
         <Heading as="h1" id="contactme-section" color='#28282B' _dark={{color:'#FFF'}}>
-          Contact
+          Contact below
         </Heading>
         <Box p={6} rounded="md" w="100%" >
           <form 
@@ -181,7 +181,7 @@ const LandingSection = () => {
                 {errors.comment ? <div style={{color:'rgb(250, 41, 41)'}}>{errors.comment?.message}</div> :null}
                 <input type="hidden" name="redirect" value="https://web3forms.com/success" />
               </FormControl>
-              <Button type="submit" bgColor="cyan.200" width="full">
+              <Button type="submit" bgColor="pink.200" _dark={{bgColor:"pink.400"}} width="full">
                 {isSubmitted? <FontAwesomeIcon icon={faSpinner} className="loader2"/> :'Submit'}
               </Button>
               <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE"></input>

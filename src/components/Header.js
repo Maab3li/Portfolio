@@ -116,7 +116,7 @@ const Header = () => {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor='cyan.50'
+      backgroundColor='pink.400'
       _dark={{bg:'#28282B'}}
       zIndex='9999'
     >

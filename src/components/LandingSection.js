@@ -1,48 +1,70 @@
-import React from "react";
 import '../App.css'
 import { Avatar, HStack, VStack, Box } from "@chakra-ui/react";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
-import avatar from '../images/Pi7_cropper (1).png'
+import avatar from '../images/Pngtree—a faceless art_8782179.png'
+import { motion, useInView } from 'framer-motion';
+import { defineStyle } from '@chakra-ui/react';
+import { useRef } from 'react';
 import FullScreenSection from "./FullScreenSection";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const greeting = "Hello, I am ";
-const myName = "Maab"
-const bio1 = "A frontend developer..";
-const bio2 = "using React ";
-const leftBracket = "<"
-const rightBracket = ">"
-const icon = faReact
+export default function LandingSection () {
+  
+const greeting = "Welcome to my portfolio 🌸";
+const leftCurlybrace = "{"
+const rightBCurlybrace = "}"
+const ref = useRef(null);
+const isInView = useInView(ref, { once: true });
 
-// Implement the UI for the LandingSection component according to the instructions.
-// Use a combination of Avatar, Heading and VStack components.
-const LandingSection = () => (
+
+const ringCss = defineStyle({
+  outlineWidth: "2px",
+  outlineColor: "pink",
+  outlineOffset: "2px",
+  outlineStyle: "solid",
+})
+
+
+return(
+
   <FullScreenSection
     justifyContent="center"
     alignItems="center"
     isDarkBackground
-    backgroundColor="white"
-    _dark={{backgroundColor:'black'}}
+    bgGradient ="linear(to-b, pink.800, pink.400)"
+    _dark={{bgGradient:'linear(to-b, black, black)'}}
   >
-    <VStack gap={10} mt={{base:250,xl:280}} >
+    <VStack gap={10} mt={150} >
       <HStack>
-        <Box className="sp" _dark={{color:'white'}}> {leftBracket} </Box>
-        <Avatar size='xl' backgroundColor='white' _dark={{backgroundColor:'black'}}>
-          <img src={avatar} alt="avatar" style={{borderRadius:'70%'}} />
-        </Avatar>
-        <Box className="sp" _dark={{color:'white'}}> /{rightBracket} </Box>
+        
+        <Box
+        boxSize={{base:'xs'}}>
+          <Avatar
+          css={ringCss}
+          colorPalette="pink"
+          size='full' 
+          backgroundColor='white' _dark={{backgroundColor:'black'}}>
+            <img src={avatar} alt="avatar" style={{borderRadius:'70%'}} />
+          </Avatar>
+        </Box>
+        
       </HStack>
-    <Box fontSize='xl' color='#28282B' _dark={{color:'white'}} fontWeight={600}>
-      {greeting} <span className="name">{myName + '!'}</span>
-    </Box>
     <Box fontSize='2xl' color='#28282B' _dark={{color:'white'}} fontWeight={600}>
-      {bio1}
-    </Box>
-    <Box fontSize='2xl' color='#28282B' _dark={{color:'white'}} fontWeight={600}>
-      {bio2}<FontAwesomeIcon icon={icon} color="cyan" className="loader"/>
+      <h2      
+       ref={ref}
+       className="text-xl text-center sm:text-4xl font-bold tracking-tighter md:text-6xl md:leading-[4rem]"
+      >
+      {greeting.split('').map((letter, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.2, delay: index * 0.1 }}
+        >
+          {letter}
+        </motion.span>
+      ))}
+    </h2>
     </Box>
     </VStack>
   </FullScreenSection>
-);
-
-export default LandingSection;
+  )
+};
