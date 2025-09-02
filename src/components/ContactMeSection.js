@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from "react";
 import { useForm } from "react-hook-form";
+import { motion, useAnimate, useInView } from "motion/react";
 import emailjs from '@emailjs/browser';
 import {
   Box,
@@ -30,6 +31,28 @@ const LandingSection = () => {
       comment:''
     }
   })
+
+  
+    const [scope, animate] = useAnimate()
+    const isInView = useInView(scope)
+  
+    console.log(isInView)
+    
+    const [animation, setAnimation] = useState('')
+  
+        const textVariants = {
+        hidden: { opacity: 0, y: 20 }, // Initially invisible and slightly below its final position
+        visible: { opacity: 1, y: 0, transition: { duration: .5 } }, // Fully visible and in its final position
+      };
+  
+      useEffect(() => {
+          if(isInView) {
+              setAnimation(textVariants.visible)
+          }
+          if(!isInView) {
+              setAnimation(textVariants.hidden)
+          }
+      },[isInView])
 
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [Message, setMessage] = React.useState("");
@@ -111,6 +134,13 @@ const LandingSection = () => {
       py={16}
       spacing={8}
     >
+      <motion.div
+            ref={scope}
+            variants={textVariants}
+            initial="hidden"
+            animate= {animation}
+            style={{overflow:'scroll'}}
+            >
       <VStack w='100vw' px={{base:0,sm:8,base:10}} alignItems="flex-start">
         <Heading as="h1" id="contactme-section" color='#28282B' _dark={{color:'#FFF'}}>
           Contact below
@@ -189,6 +219,7 @@ const LandingSection = () => {
           </form>
         </Box>
       </VStack>
+      </motion.div>
     </FullScreenSection>
   );
 };

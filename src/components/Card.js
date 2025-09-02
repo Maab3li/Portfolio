@@ -1,16 +1,30 @@
 import { Heading, HStack, Image, Text, VStack, Box, Button, color } from "@chakra-ui/react";
 import { Link, Routes, Route } from "react-router-dom";
+import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowRotateBackward, faArrowsUpToLine, faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
-import { ArrowUpDownIcon } from "@chakra-ui/icons";
+import { motion, useScroll } from "motion/react";
 
 const Card = ({ title, description, imageSrc, url }) => {
+
+  const ref = useRef(null)
+
+  const {scrollYProgress} = useScroll({
+    target:ref,
+    offset:['0 1', '1.20 1']
+  })
+  
   return (
+    <motion.section
+    ref={ref}
+    style={{
+      scale: scrollYProgress,
+      opacity: scrollYProgress
+    }}
+    >
     <HStack
     width='full'
     direction='row'
-    
     >
       <Box
       color='black'
@@ -30,7 +44,7 @@ const Card = ({ title, description, imageSrc, url }) => {
         </Box>
       </Box>
     </HStack>
-    
+    </motion.section>
   )
 };
 

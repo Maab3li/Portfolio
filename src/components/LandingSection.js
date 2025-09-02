@@ -1,7 +1,7 @@
 import '../App.css'
 import { Avatar, HStack, VStack, Box } from "@chakra-ui/react";
 import avatar from '../images/Pngtree—a faceless art_8782179.png'
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useAnimate } from 'framer-motion';
 import { defineStyle } from '@chakra-ui/react';
 import { useRef } from 'react';
 import FullScreenSection from "./FullScreenSection";
