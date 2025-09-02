@@ -18,7 +18,7 @@ function About () {
     
     return (
         <FullScreenSection
-        bgGradient="linear(to-b, pink.400, pink.400)"
+        bgGradient="linear(to-b, white, white)"
         _dark={{bgGradient:'linear(to-b, black, black)'}}
         isDarkBackground
         alignItems="flex-start"
@@ -38,7 +38,7 @@ function About () {
             color="#28282B" 
             _dark={{color:'#FFF'}} 
             fontSize={25}>
-                Hi there I'm Maab Ali, I've studied software engineering at Sudan University of Science and Technology. After graduation i spent my time studying, and now iam familiar with many technologies, and Reactjs is my specialization.
+                I'm Maab Ali, I've studied software engineering at Sudan University of Science and Technology. After graduation i spent my time studying, and now iam familiar with many technologies, and Reactjs is my choice.
             </Text>
             <Heading 
             as="h1" 

@@ -29,7 +29,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <FullScreenSection
-      bgGradient="linear(to-b, pink.400, pink.400)"
+      bgGradient="linear(to-b, white, white)"
       _dark={{bgGradient:'linear(to-b, black, black)'}}
       isDarkBackground
       p={8}

@@ -106,7 +106,7 @@ const LandingSection = () => {
   return (
     <FullScreenSection
       isDarkBackground
-      bgGradient ="linear(to-b, pink.400, pink.800)"
+      bgGradient ="linear(to-b, white, white)"
       _dark={{bgGradient:'linear(to-b, black, black)'}}
       py={16}
       spacing={8}

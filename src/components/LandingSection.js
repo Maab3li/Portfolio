@@ -29,10 +29,10 @@ return(
     justifyContent="center"
     alignItems="center"
     isDarkBackground
-    bgGradient ="linear(to-b, pink.800, pink.400)"
+    bgGradient ="linear(to-b, white, white)"
     _dark={{bgGradient:'linear(to-b, black, black)'}}
   >
-    <VStack gap={10} mt={150} >
+    <VStack gap={10} mt={{base:150}} >
       <HStack>
         
         <Box
@@ -48,9 +48,9 @@ return(
         
       </HStack>
     <Box fontSize='2xl' color='#28282B' _dark={{color:'white'}} fontWeight={600}>
-      <h2      
+      <h1      
        ref={ref}
-       className="text-xl text-center sm:text-4xl font-bold tracking-tighter md:text-6xl md:leading-[4rem]"
+       style={{textAlign:'center', fontSize:'30px'}}
       >
       {greeting.split('').map((letter, index) => (
         <motion.span
@@ -62,7 +62,7 @@ return(
           {letter}
         </motion.span>
       ))}
-    </h2>
+    </h1>
     </Box>
     </VStack>
   </FullScreenSection>
