@@ -7,20 +7,20 @@ const projects = [
   {
     title: "To-do App",
     description:
-      "A small app to organize work.",
+      "Useful app to use",
     getImageSrc: () => require("../images/to-do list.png"),
     url: "https://todo-list-app99.vercel.app"
   },
   {
     title: "Mina Clinic",
     description:
-      "A modern website design for a dental clinic.",
+      "modern website for clinic",
     getImageSrc: () => require("../images/pc-home.png"),
     url :"https://mina-clinic.vercel.app"
   },
   {
   title: 'CRUDS Product Management System',
-  description: 'a create, read, update, delete and search system to help managers manage their stocks.',
+  description: 'a create, read, update, delete and search system for managers',
   getImageSrc: () => require("../images/cruds.png"),
   url :'https://product-cruds.vercel.app/'
   }
