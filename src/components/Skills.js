@@ -35,11 +35,12 @@ export const Skills = () => {
             >
                 <SimpleGrid
             p={8}
-            mt={8}
-            gridGap={8}
+            mt={20}
+            gridColumnGap={{base:20}}
+            gridRowGap={{base:6, md:10}}
             alignItems='flex-center'
             justifyContent='center'
-            columns={{base:3, md:4, lg:5}}
+            columns={{base:2, sm:3, md:4, lg:5}}
             spacing={8}
             >
                 <SkillCard imgSrc={html} imgAlt='HTML5 icon' />

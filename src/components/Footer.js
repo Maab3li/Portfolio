@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Flex} from "@chakra-ui/react";
+import {Box, Flex, Text} from "@chakra-ui/react";
 
 const Footer = () => {
   return (
@@ -16,7 +16,9 @@ const Footer = () => {
           maxWidth="1024px"
           height={16}
         >
-          <p> Maab Ali @2025</p>
+          <Text
+          fontSize={20}
+          fontWeight='bold'> Made with Chakra UI and Reactjs - Dev Maab Ali 2025</Text>
         </Flex>
       </footer>
     </Box>

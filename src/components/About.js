@@ -79,7 +79,7 @@ function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"
                 <Text
                 textAlign='end'
                 pr={{base:20, sm:40, md:60, xl:500}}
-                pt={10}
+                pt={{base:10, xl:20}}
                 color='black'
                 _dark={{color:'white'}}
                 fontSize={{base:40, md:50, lg:60}}>
