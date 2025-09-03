@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import { AlertProvider } from "../context/alertContext";
 import Alert from "./Alert";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Skills } from "./Skills";
 
 function Mainpage() {
 
@@ -18,6 +19,7 @@ function Mainpage() {
           <Header />
           <LandingSection />
           <About />
+          <Skills />
           <ProjectsSection />
           <ContactMeSection />
           <Footer />
