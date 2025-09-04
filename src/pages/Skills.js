@@ -40,9 +40,9 @@ export const Skills = () => {
                 axis="horizontal"
                 >
                     <motion.section
-                    initial={{opacity: 0, translateX: "-100%"}}
+                    initial={{opacity: 0, translateX: "-50%"}}
                     whileInView={{opacity: 1, translateX: 0}}
-                    transition={{duration: .8}}>
+                    transition={{duration: .6}}>
                         <SimpleGrid
                         p={8}
                         mt={20}
