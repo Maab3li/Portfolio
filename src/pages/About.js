@@ -42,7 +42,7 @@ function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"
                 fontSize={30}>
                     
                     <TextAnimation
-                    children="I'm Maab Ali, I've studied software engineering at Sudan University of Science and Technology. After graduation i spent my time studying, and now iam familiar with many technologies, and Reactjs is my choice 💗."
+                    children="I'm Maab Ali, I've studied software engineering at Sudan University of Science and Technology. After graduation i attended multiple courses, and now iam familiar with some technologies, but Reactjs is my choice 💗."
                     />
                 </Text>
                 <Text
