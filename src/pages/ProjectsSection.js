@@ -1,7 +1,6 @@
-import React from "react";
-import FullScreenSection from "./FullScreenSection";
-import { Box, Heading , SimpleGrid} from "@chakra-ui/react";
-import Card from "./Card";
+import FullScreenSection from "../components/FullScreenSection";
+import { Heading , SimpleGrid} from "@chakra-ui/react";
+import Card from "../components/Card";
 
 const projects = [
   {

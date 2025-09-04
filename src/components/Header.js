@@ -107,6 +107,7 @@ const Header = () => {
   return (
     <Box
       position="fixed"
+      width='100vw'
       height='fit-content'
       py={{base:4,md:0}}
       top={0}

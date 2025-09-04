@@ -17,8 +17,8 @@ const Footer = () => {
           height={16}
         >
           <Text
-          fontSize={20}
-          fontWeight='bold'> Made with Chakra UI and Reactjs - Dev Maab Ali 2025</Text>
+          fontSize={15}
+          fontWeight='bold'> Cooked with Reactjs and Chakra UI & Maab Ali 2025</Text>
         </Flex>
       </footer>
     </Box>

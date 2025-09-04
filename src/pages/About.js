@@ -1,7 +1,7 @@
-import { CircularProgress, Heading, List, ListIcon, Box, ListItem,Text, VStack, Grid, GridItem, SimpleGrid, Flex, Center, AbsoluteCenter } from "@chakra-ui/react"
-import FullScreenSection from "./FullScreenSection"
+import { Heading, Box, Text } from "@chakra-ui/react"
+import FullScreenSection from "../components/FullScreenSection"
 import { TextAnimation } from "../Features/TextAnimation"
-import { motion, useAnimate, useInView, AnimatePresence } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 import { useEffect, useState } from "react"
 
 function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"]}) {
@@ -31,7 +31,8 @@ function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"
                 pt={8}
                 color='#28282B' 
                 _dark={{color:'#FFF'}}>
-                About me
+                    <TextAnimation
+                    children="About me" />
                 </Heading>
                 <Text
                 px={8}
@@ -46,10 +47,11 @@ function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"
                 fontWeight='bold'
                 px={14}
                 fontSize={30}>
-                    As my talents are
+                    <TextAnimation
+                    children='As my talents are' />
                 </Text>
                 <Box
-                pl='50vw'
+                pl={{base:'50vw'}}
                 pt={{base:10, xl:20}}
                 color='black'
                 _dark={{color:'white'}}

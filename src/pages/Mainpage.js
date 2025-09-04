@@ -1,14 +1,13 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { ColorModeProvider } from "@chakra-ui/react";
-import Header from "./Header";
+import Header from "../components/Header";
 import LandingSection from "./LandingSection";
 import About from "./About";
 import ProjectsSection from "./ProjectsSection";
 import ContactMeSection from "./ContactMeSection";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 import { AlertProvider } from "../context/alertContext";
-import Alert from "./Alert";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import Alert from "../components/Alert";
 import { Skills } from "./Skills";
 
 function Mainpage() {
