@@ -11,6 +11,7 @@ import python from '../images/Python.png'
 import tailwind from '../images/Tailwind CSS.png'
 import github from '../images/GitHub.png'
 import vsgithub from '../images/GitHub Codespaces.png'
+import { TextAnimation } from "../Features/TextAnimation"
 
 export const Skills = () => {
   return (
@@ -26,13 +27,15 @@ export const Skills = () => {
                 alignItems="flex-start"
                 spacing={8}
                 >
-                <Heading 
-                as="h1" 
-                pl={8}
-                color='#28282B' 
-                _dark={{color:'#FFF'}}>
-                My technical skills
-                </Heading>
+                <TextAnimation>
+                    <Heading 
+                    as="h1" 
+                    pl={8}
+                    color='#28282B' 
+                    _dark={{color:'#FFF'}}>
+                    My technical skills
+                    </Heading>
+                </TextAnimation>
                 <AbsoluteCenter
                 axis="horizontal"
                 >

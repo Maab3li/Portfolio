@@ -1,6 +1,7 @@
 import FullScreenSection from "../components/FullScreenSection";
 import { Heading , SimpleGrid} from "@chakra-ui/react";
 import Card from "../components/Card";
+import { TextAnimation } from "../Features/TextAnimation";
 
 const projects = [
   {
@@ -35,9 +36,11 @@ const ProjectsSection = () => {
       alignItems="flex-start"
       spacing={8}
     >
-      <Heading as="h1" id="projects-section" color='#28282B' _dark={{color:'#FFF'}}>
-       My projects
-      </Heading>
+      <TextAnimation>
+        <Heading as="h1" id="projects-section" color='#28282B' _dark={{color:'#FFF'}}>
+          My projects
+        </Heading>
+      </TextAnimation>
       <SimpleGrid
         columns={{ base: 1, md: 2, lg:2}}
         gridGap={8}

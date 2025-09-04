@@ -1,5 +1,6 @@
 import React from "react";
 import {Box, Flex, Text} from "@chakra-ui/react";
+import { TextAnimation } from "../Features/TextAnimation";
 
 const Footer = () => {
   return (
@@ -16,9 +17,13 @@ const Footer = () => {
           maxWidth="1024px"
           height={16}
         >
-          <Text
-          fontSize={15}
-          fontWeight='bold'> Cooked with Reactjs and Chakra UI & Maab Ali 2025</Text>
+          <TextAnimation>
+            <Text
+            fontSize={15}
+            fontWeight='bold'> 
+              Cooked with Reactjs and Chakra UI & Maab Ali 2025
+            </Text>
+          </TextAnimation>
         </Flex>
       </footer>
     </Box>

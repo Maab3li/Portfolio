@@ -23,20 +23,24 @@ function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"
         alignItems="flex-start"
         spacing={8}
         >
-            
+            <TextAnimation>
                 <Heading 
                 as="h1" 
                 id="about&skills-section" 
                 pl={8}
                 pt={8}
-                color='#28282B' 
+               
+                color='black' 
                 _dark={{color:'#FFF'}}>
-                    <TextAnimation
-                    children="About me" />
+                About me
                 </Heading>
+                </TextAnimation>
                 <Text
                 px={8}
+                color='black'
+                _dark={{color:'white'}}
                 fontSize={30}>
+                    
                     <TextAnimation
                     children="I'm Maab Ali, I've studied software engineering at Sudan University of Science and Technology. After graduation i spent my time studying, and now iam familiar with many technologies, and Reactjs is my choice 💗."
                     />
