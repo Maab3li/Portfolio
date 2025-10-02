@@ -12,7 +12,6 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
     <ChakraProvider>
       <AlertProvider>
         <main>
@@ -25,7 +24,6 @@ function App() {
         </main>
       </AlertProvider>
     </ChakraProvider>
-    </BrowserRouter>
   );
 }
 
