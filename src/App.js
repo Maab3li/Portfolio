@@ -12,6 +12,7 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
+    <BrowserRouter>
     <ChakraProvider>
       <AlertProvider>
         <main>
@@ -24,7 +25,11 @@ function App() {
         </main>
       </AlertProvider>
     </ChakraProvider>
+    </BrowserRouter>
   );
 }
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 
 export default App;
