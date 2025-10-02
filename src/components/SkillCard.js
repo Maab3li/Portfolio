@@ -13,7 +13,7 @@ export const SkillCard = ({imgSrc, imgAlt}) => {
     bgGradient='linear(to-b,  white, pink.200)'
     _dark={{bgGradient:'linear(to-b, black, gray.200)', borderColor:'gray.900'}}
     >
-        <img src={imgSrc} rel={imgAlt} style={{width:'100%', height:'100%'}}/>
+        <img src={imgSrc} alt={imgAlt} style={{width:'100%', height:'100%'}}/>
     </Box>
   )
 }

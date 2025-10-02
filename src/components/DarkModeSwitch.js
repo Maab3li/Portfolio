@@ -11,6 +11,7 @@ const DarkModeSwitch = () => {
             top='1rem'
             right='1rem'
             mt={{base:2,md:1}}
+            htmlFor="dark/light mode switch"
             color='green'
             isChecked={isDark}
             onChange={toggleColorMode}>

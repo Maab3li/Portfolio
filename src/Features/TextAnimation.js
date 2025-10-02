@@ -13,9 +13,6 @@ export const TextAnimation = ({children}) => {
     }
 
   return (
-    <Text
-    px={8}
-    fontSize={30}>
     <motion.section
     ref={ref}
     variants={textVariants}
@@ -24,6 +21,5 @@ export const TextAnimation = ({children}) => {
     transition={{duration: .5, ease:'easeInOut'}}>
         {children}
     </motion.section>
-    </Text>
   )
 }
