@@ -5,7 +5,7 @@ import Mainpage from "./pages/Mainpage";
 function App() {
   return (
     <BrowserRouter>
-    <Mainpage />
+      <Mainpage />
     </BrowserRouter>
   );
 }
