@@ -1,7 +1,7 @@
 import '../App.css'
 import { Avatar, HStack, VStack, Box } from "@chakra-ui/react";
 import avatar from '../images/Pngtree—a faceless art_8782179.png'
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView } from 'motion/react';
 import { defineStyle } from '@chakra-ui/react';
 import { useRef } from 'react';
 import FullScreenSection from "../components/FullScreenSection";
@@ -30,9 +30,8 @@ return(
     bgGradient ="linear(to-b, white, white)"
     _dark={{bgGradient:'linear(to-b, black, black)'}}
   >
-    <VStack gap={10} mt={{base:150}} >
+    <VStack gap={10} mt={140} >
       <HStack>
-        
         <Box
         boxSize={{base:'xs'}}>
           <Avatar

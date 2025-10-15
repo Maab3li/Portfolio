@@ -20,8 +20,9 @@ const Footer = () => {
           <TextAnimation>
             <Text
             fontSize={15}
-            fontWeight='bold'> 
-              Cooked with Reactjs and Chakra UI & Maab Ali 2025
+            fontWeight='bold'
+            textAlign='center'> 
+              Cooked with Reactjs and Chakra UI <br /> Maab Ali 2025
             </Text>
           </TextAnimation>
         </Flex>

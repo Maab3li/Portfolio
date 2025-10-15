@@ -9,20 +9,20 @@ const projects = [
     description:
       "Useful app to use",
     getImageSrc: () => require("../images/to-do list.png"),
-    url: "https://todo-list-app99.vercel.app"
+    url: "https://maab3li.github.io/TODOList-app"
   },
   {
     title: "Mina Clinic",
     description:
       "modern website for clinic",
     getImageSrc: () => require("../images/pc-home.png"),
-    url :"https://mina-clinic.vercel.app"
+    url :"https://maab3li.github.io/Mina-clinic"
   },
   {
   title: 'CRUDS Product Management System',
   description: 'a create, read, update, delete and search system for managers',
   getImageSrc: () => require("../images/cruds.png"),
-  url :'https://product-cruds.vercel.app/'
+  url :''
   }
 ];
 

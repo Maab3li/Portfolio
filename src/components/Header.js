@@ -16,7 +16,7 @@ import { Box, HStack, VStack,
   CloseButton,
   transition} from "@chakra-ui/react";
 import { icon } from "@fortawesome/fontawesome-svg-core";
-import { easeInOut } from "motion";
+import { easeInOut } from "motion/react";
 
 const socials = [
   {

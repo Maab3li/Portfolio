@@ -1,4 +1,4 @@
-import { motion, useInView } from "motion/react"
+import { motion, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 import { Text } from "@chakra-ui/react"
 

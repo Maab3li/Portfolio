@@ -1,8 +1,7 @@
-import { Heading, HStack, Image, Text, VStack, Box, Button, color } from "@chakra-ui/react";
-import { Link, Routes, Route } from "react-router-dom";
+import { HStack, Image, Text, Box, Button } from "@chakra-ui/react";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowRotateBackward, faArrowsUpToLine, faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion, useScroll } from "motion/react";
 
 const Card = ({ title, description, imageSrc, url }) => {
