@@ -4,7 +4,7 @@ import { TextAnimation } from "../Features/TextAnimation"
 import { motion, AnimatePresence } from "motion/react"
 import { useEffect, useState } from "react"
 
-function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"]}) {
+function About ({words = ["Passion ❤️", "Logic 💡", "Feel 👁️👁️","Sense ❕"]}) {
 
     const [index, setIndex] = useState(0)
 
@@ -42,7 +42,7 @@ function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"
                 fontSize={30}>
                     
                     <TextAnimation
-                    children="I'm Maab Ali, I've studied software engineering at Sudan University of Science and Technology. After graduation i attended multiple courses, and now iam familiar with some technologies, but Reactjs is my choice 💗."
+                    children="I'm Maab Ali, I've studied software engineering at Sudan University of Science and Technology. After graduation i kept leveraging my skills by attending online courses and building projects, I'm familiar with multiple skills, but using React.js 💗."
                     />
                 </Text>
                 <Text
@@ -52,7 +52,7 @@ function About ({words = ["Passion 💥", "Logic 📏", "Focus 🔎","Sense ❕"
                 px={14}
                 fontSize={30}>
                     <TextAnimation
-                    children='As my talents are' />
+                    children='My talents include' />
                 </Text>
                 <Box
                 pl={{base:'50vw'}}

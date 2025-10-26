@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { motion, useAnimate, useInView } from "motion/react";
-import emailjs from '@emailjs/browser';
 import {
   Box,
   Button,
   FormControl,
-  FormErrorMessage,
   FormLabel,
   Heading,
   Input,
@@ -116,7 +114,7 @@ const LandingSection = () => {
       <VStack w='100vw' px={{base:0,sm:8,base:10}} alignItems="flex-start">
         <TextAnimation>
           <Heading as="h1" id="contactme-section" color='#28282B' _dark={{color:'#FFF'}}>
-            Contact below
+            Contact Me
           </Heading>
         </TextAnimation>
         <Box p={6} rounded="md" w="100%" >
