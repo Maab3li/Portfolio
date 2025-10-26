@@ -8,11 +8,9 @@ import ProjectsSection from "./pages/ProjectsSection";
 import ContactMeSection from './pages/ContactMeSection';
 import Footer from "./components/Footer";
 import Alert from "./components/Alert";
-import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter>
       <ChakraProvider>
             <AlertProvider>
                 <Header />
@@ -25,7 +23,6 @@ function App() {
                 <Alert />
             </AlertProvider>
           </ChakraProvider>
-    </HashRouter>
   );
 }
 
