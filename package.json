@@ -17,7 +17,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "caniuse-lite": "^1.0.30001697",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "formik": "^2.4.6",
